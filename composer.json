@@ -13,7 +13,7 @@
     },
     "autoload": {
       "psr-4": {
-        "web36\\laravel-otp-service\\": "src/"
+        "web36\\OtpService\\": "src/"
       }
     },
     "require-dev": {
@@ -21,7 +21,7 @@
     },
     "autoload-dev": {
       "psr-4": {
-        "web36\\laravel-otp-service\\Tests\\": "tests/"
+        "web36\\OtpService\\Tests\\": "tests/"
       }
     }
   }
