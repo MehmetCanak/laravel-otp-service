@@ -1,1 +1,1 @@
-# laravel-otp-service
+This libraries is used to generate OTP for user and verify OTP for user
