@@ -2,21 +2,36 @@
 
 namespace web36\Otp;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Throwable;
+
 
 class ServiceProvider extends BaseServiceProvider{
-    // public function boot(){
-    //     $this->publishes([
-    //         __DIR__.'/config/otp.php' => config_path('otp.php'),
-    //     ]);
-    // }
-    // public function register(){
-    //     $this->mergeConfigFrom(
-    //         __DIR__.'/config/otp.php', 'otp'
-    //     );
-    //     $this->app->singleton('otp', function($app){
-    //         return new Otp();
-    //     });
-    // }
+    
+    
+    public function boot()
+    {
+
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
+        $this->publishes([
+            $this->getConfig() => config_path('otp.php'),
+        ], 'otp-config');
+
+        $this->publishes([
+            __DIR__.'/../database/migrations/' => database_path('migrations')
+        ], 'otp-migrations');
+        
+    }
+
+    
+    public function register()
+    {
+        // $this->mergeConfigFrom(__DIR__.'/../config/pagereview.php', 'pagereview');
+        $this->mergeConfigFrom($this->getConfig(), 'otp');
+    }
+
+    protected function getConfig(): string
+    {
+        return __DIR__.'/../config/config.php';
+    }
 
 }
