@@ -6,7 +6,7 @@ This libraries is used to generate OTP for user and verify OTP for user
 
 ## Installation
 
-To install through Composer, by run the following command:
+You can install the package via composer:
 
 ```
 composer require web36/laravel-otp-service
@@ -14,5 +14,9 @@ composer require web36/laravel-otp-service
 
 ## Configuration
 
-loading ...
+As next step, let's publish config file config/otp.php by executing:
+```
+php artisan vendor:publish --provider="web36\Otp\ServiceProvider" --tag="otp-config"
+```
 
+### loading ...
