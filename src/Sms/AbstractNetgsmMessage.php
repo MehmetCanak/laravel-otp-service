@@ -325,6 +325,9 @@ abstract class AbstractNetgsmMessage extends NetgsmApiClient
      */
     public function parseResponse(): self
     {
+        if($this->_isValidXML($this->response)){
+            $this->response = $this->parseResponseXml($this->response);
+        }
         $result = explode(' ', $this->response);
 
         if (! isset($result[0])) {
@@ -394,5 +397,26 @@ abstract class AbstractNetgsmMessage extends NetgsmApiClient
         $method = 'sendVia'.$this->getSendMethod();
 
         return call_user_func([$this, $method]);
+    }
+
+    public function _isValidXML($xml) {
+        $doc = @simplexml_load_string($xml);
+        if ($doc) {
+            return true; //this is valid
+        } else {
+            return false; //this is not valid
+        }
+    }
+
+    public function parseResponseXml($xml) {
+        $xml=simplexml_load_string($xml) or die("Error: Cannot create object");
+
+        if(isset($xml->main->jobID)){
+            $str =  $xml->main->code . ' ' . $xml->main->jobID;
+        }else{
+            $str =  $xml->main->code . ' ' . $xml->main->error;
+        }
+       
+       return $str;
     }
 }

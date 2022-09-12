@@ -52,11 +52,12 @@ class NetgsmApiClient
      */
     protected function callApi($method, $url, $params = null, $headers = [])
     {
+        // dd($method, $url, $params,$headers);
         $options = [
-            'query' => [
-                'usercode' => $this->credentials['user_code'],
-                'password' => $this->credentials['secret'],
-            ],
+            // 'query' => [
+            //     'usercode' => $this->credentials['user_code'],
+            //     'password' => $this->credentials['secret'],
+            // ],
         ];
 
         if ($method == 'POST') {
