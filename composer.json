@@ -1,7 +1,7 @@
 {
     "name": "web36/laravel-otp-service",
     "type": "library",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "This libraries is used to generate OTP for user and verify OTP  for user",
     "authors": [
       {
@@ -15,12 +15,7 @@
     "keywords" : ["json", "api", "standard", "jsonapi","otp","otp-service","laravel-otp-service","laravel"],
     "require": {
         "php": "^7.3|^8.0",
-        "ext-json": "*",
-        "illuminate/database": "^8.0",
-        "illuminate/support": "^8.0",
-        "illuminate/notifications": "^8.0",
-        "illuminate/routing": "^8.0",
-        "illuminate/view": "^8.0"
+        "ext-json": "*"
     },
     "autoload": {
       "psr-4": {
