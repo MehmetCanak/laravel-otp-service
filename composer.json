@@ -36,7 +36,7 @@
     "extra": {
       "laravel": {
         "providers": [
-          "web36\\Otp\\ServiceProvider"
+          "web36\\Otp\\NetgsmServiceProvider"
         ]
       }
     },
