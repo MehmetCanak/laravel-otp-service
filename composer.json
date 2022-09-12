@@ -15,7 +15,8 @@
     "keywords" : ["json", "api", "standard", "jsonapi","otp","otp-service","laravel-otp-service","laravel"],
     "require": {
         "php": "^7.3|^8.0",
-        "ext-json": "*"
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.1"
     },
     "autoload": {
       "psr-4": {
