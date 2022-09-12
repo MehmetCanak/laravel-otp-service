@@ -1,7 +1,7 @@
 {
     "name": "web36/laravel-otp-service",
     "type": "library",
-    "version": "2.0.1",
+    "version": "2.0.0",
     "description": "This libraries is used to generate OTP for user and verify OTP  for user",
     "authors": [
       {
