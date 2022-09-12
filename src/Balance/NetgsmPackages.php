@@ -1,11 +1,11 @@
 <?php
 
-namespace TarfinLabs\Netgsm\Balance;
+namespace web36\Otp\Balance;
 
 use GuzzleHttp\Exception\GuzzleException;
-use TarfinLabs\Netgsm\Exceptions\NetgsmException;
-use TarfinLabs\Netgsm\NetgsmApiClient;
-use TarfinLabs\Netgsm\NetgsmErrors;
+use web36\Otp\Exceptions\NetgsmException;
+use web36\Otp\NetgsmApiClient;
+use web36\Otp\NetgsmErrors;
 
 class NetgsmPackages extends NetgsmApiClient
 {

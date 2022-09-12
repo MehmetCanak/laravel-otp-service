@@ -1,12 +1,12 @@
 <?php
 
-namespace TarfinLabs\Netgsm\Report;
+namespace web36\Otp\Report;
 
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
-use TarfinLabs\Netgsm\Exceptions\ReportException;
-use TarfinLabs\Netgsm\NetgsmApiClient;
+use web36\Otp\Exceptions\ReportException;
+use web36\Otp\NetgsmApiClient;
 
 abstract class AbstractNetgsmReport extends NetgsmApiClient
 {
