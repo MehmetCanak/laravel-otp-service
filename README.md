@@ -23,7 +23,7 @@ php artisan vendor:publish --provider="web36\Otp\ServiceProvider" --tag="otp-con
 
 Add the necessary settings for netgsm to the settings (```.env ```) of your project
 
-```
+```php
 NETGSM_USERCODE=""
 NETGSM_SECRET=""
 NETGSM_LANGUAGE="tr"
@@ -42,7 +42,7 @@ NETGSM_OPERATOR_CODE=""
 
 ### Sending otp for login example
 
-```
+```php
 
 use web36\Otp\Sms\NetGsmOtpMessage ;
 use web36\Otp\Netgsm ;
